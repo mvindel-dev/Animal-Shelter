@@ -1,0 +1,12 @@
+<div class="container mt-3">
+  <div class="row">
+    <div *ngFor="let cat of cats" class="col-md-4 mb-3" (click)="selectCat(cat)" [routerLink]="['/pet/cat', cat.name]">
+      <div class="card">
+        <img [src]="cat.main_image" class="card-img-top" alt="Imagen" height="300" width="640">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ cat.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
